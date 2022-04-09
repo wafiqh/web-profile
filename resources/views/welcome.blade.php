@@ -27,10 +27,10 @@
   <link rel="stylesheet" href="/vendor/animate/animate.min.css">
 
   <!-- Theme CSS -->
-  <link rel="stylesheet" href="css/theme.css">
-  <link rel="stylesheet" href="css/theme-elements.css">
-  <link rel="stylesheet" href="css/theme-blog.css">
-  <link rel="stylesheet" href="css/theme-shop.css">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/theme-elements.css">
+  <link rel="stylesheet" href="/css/theme-blog.css">
+  <link rel="stylesheet" href="/css/theme-shop.css">
 
   <!-- Demo CSS -->
   <link rel="stylesheet" href="/css/demo-gym.css">
