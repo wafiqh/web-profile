@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BlogController;
+use App\Models\Blog;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +15,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [BlogController::class, 'index']);
+Route::get('/detail/{blog}', [BlogController::class, 'show']);
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $blogs = Blog::latest()->paginate(6);
+
+    return view('dashboard', [
+        'blogs' => $blogs,
+    ]);
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+Route::middleware(['auth'])->post('/dashboard', [BlogController::class, 'store']);
+Route::middleware(['auth'])->get('/dashboard/tambah', [BlogController::class, 'create']);
+Route::middleware(['auth'])->get('/dashboard/edit/{blog}', [BlogController::class, 'edit']);
+Route::middleware(['auth'])->put('/dashboard/edit/{blog}', [BlogController::class, 'update']);
+Route::middleware(['auth'])->delete('/dashboard/delete/{blog}', [BlogController::class, 'destroy']);
+
+require __DIR__ . '/auth.php';

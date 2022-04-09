@@ -27,10 +27,10 @@
   <link rel="stylesheet" href="/vendor/animate/animate.min.css">
 
   <!-- Theme CSS -->
-  <link rel="stylesheet" href="css/theme.css">
-  <link rel="stylesheet" href="css/theme-elements.css">
-  <link rel="stylesheet" href="css/theme-blog.css">
-  <link rel="stylesheet" href="css/theme-shop.css">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/theme-elements.css">
+  <link rel="stylesheet" href="/css/theme-blog.css">
+  <link rel="stylesheet" href="/css/theme-shop.css">
 
   <!-- Demo CSS -->
   <link rel="stylesheet" href="/css/demo-gym.css">
@@ -64,41 +64,19 @@
 
     <div role="main" class="main">
 
-      <section class="section section-no-border section-light custom-padding-top-1 mb-0">
+      <section style="min-height: calc(100vh - 180px);"
+        class="section section-no-border section-light custom-padding-top-1 mb-0">
         <div class="container">
           <div class="row mt-4">
-            <div class="col">
-              <h1 class="font-weight-bold text-color-primary mb-0">Mini Artikel</h1>
-              <h4 class="font-weight-bold text-color-quaternary">Artikel untuk kamu</h4>
-              <p>Baca artikel di sini, artikelnya keren, asik, teman gabut, buang suntuk, kocak, dan
-                aktual pastinya. TTD Wafiqh cantik dan manis :).</p>
+            <div class="col-md-7 col-lg-9">
+              <h1 class="font-weight-bold text-color-primary mb-0">{{$blog->judul}}</h1>
+              <h4 class="font-weight-bold text-color-quaternary">{{$blog->user->name}}</h4>
+              <p>{{$blog->isi}}</p>
+            </div>
+            <div class="col-md-5 col-lg-3">
+              <img src="/storage/img/{{$blog->gambar}}" class="img-fluid" alt="">
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="section section-quaternary section-center section-no-border m-0">
-        <div class="container">
-          <div class="row justify-content-center mb-4 mb-md-0 mb-lg-5">
-            @foreach ($blogs as $item)
-            <div class="col-md-8 col-lg-4 mb-4">
-              <span class="thumb-info custom-thumb-info-2 thumb-info-hide-wrapper-bg">
-                <span class="thumb-info-wrapper m-0">
-                  <img src="/storage/img/{{$item->gambar}}" class="img-fluid" alt="">
-                </span>
-                <span class="thumb-info-caption bg-color-light text-center p-5">
-                  <h4 class="font-weight-bold text-color-quaternary mb-3">{{$item->judul}}</h4>
-                  <p class="text-color-dark p-0">{{$item->isi}}</p>
-                  <a class="btn btn-primary custom-btn-style-1 text-uppercase text-color-light custom-font-weight-medium"
-                    href="/detail/{{$item->id}}" title="Learn More">Lanjut Baca</a>
-                </span>
-              </span>
-            </div>
-            @endforeach
-          </div>
-        </div>
-        <div class="row justify-content-center mt-4">
-          {{$blogs->links()}}
         </div>
       </section>
 
