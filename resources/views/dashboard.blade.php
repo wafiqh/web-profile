@@ -29,7 +29,7 @@
                             <td>{{$item->id}}</td>
                             <td>{{$item->judul}}</td>
                             <td>{{$item->isi}}</td>
-                            <td><img src="/img/{{$item->gambar}}" height="110px" width="110px" alt=""></td>
+                            <td><img src="/storage/img/{{$item->gambar}}" height="110px" width="110px" alt=""></td>
                             <td class="row">
                                 <a class="mr-1" href="/dashboard/edit/{{$item->id}}">
                                     <i class="fa fa-edit"></i>

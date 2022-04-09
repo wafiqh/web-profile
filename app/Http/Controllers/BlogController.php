@@ -48,7 +48,7 @@ class BlogController extends Controller
 
         if ($request->hasFile('gambar')) {
             $name = time() . '.jpg';
-            \Image::make($request->gambar)->save(public_path('img/') . $name, 60);
+            $request->gambar->storeAs('public/img', $name);
 
             Blog::create([
                 'user_id' => Auth::user()->id,
@@ -104,7 +104,7 @@ class BlogController extends Controller
 
         if ($request->hasFile('gambar')) {
             $name = time() . '.jpg';
-            \Image::make($request->gambar)->save(public_path('img/') . $name, 60);
+            $request->gambar->storeAs('public/img', $name);
 
             $blog->update([
                 'gambar' => $name,
