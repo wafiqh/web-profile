@@ -14,8 +14,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/css/app.css">
     <!-- Vendor CSS -->
-    <link rel="stylesheet" href=/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href=/vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendor/fontawesome-free/css/all.min.css">
     <!-- Scripts -->
     <script src="/js/app.js" defer></script>
 </head>
