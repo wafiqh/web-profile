@@ -84,7 +84,7 @@
             <div class="col-md-8 col-lg-4 mb-4">
               <span class="thumb-info custom-thumb-info-2 thumb-info-hide-wrapper-bg">
                 <span class="thumb-info-wrapper m-0">
-                  <img src="/storage/img/{{$item->gambar}}" class="img-fluid" alt="">
+                  <img src="/img/{{$item->gambar}}" class="img-fluid" alt="">
                 </span>
                 <span class="thumb-info-caption bg-color-light text-center p-5">
                   <h4 class="font-weight-bold text-color-quaternary mb-3">{{$item->judul}}</h4>

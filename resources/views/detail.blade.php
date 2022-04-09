@@ -74,7 +74,7 @@
               <p>{{$blog->isi}}</p>
             </div>
             <div class="col-md-5 col-lg-3">
-              <img src="/storage/img/{{$blog->gambar}}" class="img-fluid" alt="">
+              <img src="/img/{{$blog->gambar}}" class="img-fluid" alt="">
             </div>
           </div>
         </div>
