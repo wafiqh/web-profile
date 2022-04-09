@@ -22,21 +22,21 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css">
 
   <!-- Vendor CSS -->
-  <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/vendor/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="/vendor/animate/animate.min.css">
+  <link rel="stylesheet" href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{asset('vendor/fontawesome-free/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('vendor/animate/animate.min.css')}}">
 
   <!-- Theme CSS -->
-  <link rel="stylesheet" href="/css/theme.css">
-  <link rel="stylesheet" href="/css/theme-elements.css">
-  <link rel="stylesheet" href="/css/theme-blog.css">
-  <link rel="stylesheet" href="/css/theme-shop.css">
+  <link rel="stylesheet" href="{{asset('css/theme.css')}}">
+  <link rel="stylesheet" href="{{asset('css/theme-elements.css')}}">
+  <link rel="stylesheet" href="{{asset('css/theme-blog.css')}}">
+  <link rel="stylesheet" href="{{asset('css/theme-shop.css')}}">
 
   <!-- Demo CSS -->
-  <link rel="stylesheet" href="/css/demo-gym.css">
+  <link rel="stylesheet" href="{{asset('css/demo-gym.css')}}">
 
   <!-- Skin CSS -->
-  <link rel="stylesheet" href="/css/skin-gym.css">
+  <link rel="stylesheet" href="{{asset('css/skin-gym.css')}}">
 
 </head>
 
@@ -51,8 +51,8 @@
             <div class="header-column">
               <div class="header-row">
                 <div class="header-logo">
-                  <a href="/">
-                    <img alt="Wafiqh" src="/img/logo.png">
+                  <a href="">
+                    <img alt="Wafiqh" src="{{asset('img/logo.png')}}">
                   </a>
                 </div>
               </div>
@@ -84,13 +84,13 @@
             <div class="col-md-8 col-lg-4 mb-4">
               <span class="thumb-info custom-thumb-info-2 thumb-info-hide-wrapper-bg">
                 <span class="thumb-info-wrapper m-0">
-                  <img src="/storage/img/{{$item->gambar}}" class="img-fluid" alt="">
+                  <img src="{{asset('storage/img/{{$item->gambar}}')}}" class="img-fluid" alt="">
                 </span>
                 <span class="thumb-info-caption bg-color-light text-center p-5">
                   <h4 class="font-weight-bold text-color-quaternary mb-3">{{$item->judul}}</h4>
                   <p class="text-color-dark p-0">{{$item->isi}}</p>
                   <a class="btn btn-primary custom-btn-style-1 text-uppercase text-color-light custom-font-weight-medium"
-                    href="/detail/{{$item->id}}" title="Learn More">Lanjut Baca</a>
+                    href="detail/{{$item->id}}" title="Learn More">Lanjut Baca</a>
                 </span>
               </span>
             </div>
@@ -132,8 +132,8 @@
   </div>
 
   <!-- Vendor -->
-  <script src="/vendor/jquery/jquery.min.js"></script>
-  <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{asset('vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 </body>
 
 </html>
